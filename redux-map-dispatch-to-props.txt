@@ -11,3 +11,20 @@ this.props.dispatch({
 
 
 
+//outside of class
+
+const mapDispatchToProps = dispatch => {
+    return {
+        addComment: (author, rating, comment) => dispatch({
+            type: ActionTypes.ADD_COMMENT,
+            payload: {
+                author: author,
+                rating: rating,
+                comment: comment
+            }
+        }
+        ),
+    }
+}
+
+this.props.addComment(this.state.author, this.state.rating, this.state.comment);//Call inside of submit handler
