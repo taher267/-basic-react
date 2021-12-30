@@ -1,0 +1,11 @@
+//Inside of submit handler
+
+this.props.dispatch({
+            type: ActionTypes.ADD_COMMENT,
+            payload: {
+                author: this.state.author,
+                rating: this.state.rating,
+                comment: this.state.comment,
+            }
+        });
+
